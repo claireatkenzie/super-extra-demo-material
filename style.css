@@ -1,20 +1,4 @@
-.node text { 
-    font: 20em;
-    font-variant: small-caps;
-    background-color: white; 
+.rabbit {
+    background-color: red;
 }
 
-.node rect {
-    height: 30px;
-    fill: rgb(241, 215, 217);
-}
-
-.node--internal text {
-text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-}
-
-.link {
-fill: none;
-stroke: #ccc;
-stroke-width: 2px;
-}
