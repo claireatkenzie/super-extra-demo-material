@@ -4,47 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./style.css">
 
-    <!-- https://material.io/develop/web/getting-started -->
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="display: flex;">
 
-    <button class="mdc-button mdc-button--outlined" id="superCoolButton" onclick="addSongsToList()">
-        <span class="mdc-button__ripple"></span>
-        <span class="mdc-button__label">Add Songs to the Table</span>
-    </button>
+  <div class="filters">
+      <button class="btn" onclick="noKevins()" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i>  Kevin</button>
+      <button class="btn" onclick="excludeArson()" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i>  Arson</button>
+      <button class="btn" onclick="excludeSaturdays()" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i>  "Saturdays are for the boys"</button>
+      <button class="btn" onclick="momApproved()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i>  My Mom likes</button>
+      <button class="btn" onclick="likesCats()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i>  Cats</button>
+      <button class="btn" onclick="wantsToGetMarried()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i>  Seeking engagement</button>
 
+  </div>
 
-    <div class="mdc-data-table">
-        <div class="mdc-data-table__table-container">
-
-          <table class="mdc-data-table__table">
-
-            <thead>
-              <tr class="mdc-data-table__header-row">
-                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Name</th>
-                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Favorite Song</th>
-              </tr>
-            </thead>
-
-            <tbody class="mdc-data-table__content" id='songTable'>
-
-              <tr class="mdc-data-table__row">
-                <td class="mdc-data-table__cell">Claire</td>
-                <td class="mdc-data-table__cell">Mystery of Love</td>
-              </tr>
-
-            </tbody>
-
-          </table>
-        </div>
+  <div class="carddeck">
+    <div class="card" id='joe-template'>
+      <img src="https://static.designeverest.com/static/images/blog/blog228.jpg" alt="Avatar" style="width:100%">
+      <div class="data">
+        <h4>John Doe - Architect & Engineer</h4>
+        <p>I love supporting my girlfriends but my friends think I take jokes too far. I love golf</p>
       </div>
+      <div class='cardButtons'>
+        <button class="btn" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i></button>
+        <button class="btn" style="color: rgb(102, 226, 139); float: right;"><i class="fa fa-heart fa-lg"></i></button>
+      </div>
+    </div>
+  </div>
 
 <script src="./main.js"></script>
 </body>
