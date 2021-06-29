@@ -10,29 +10,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+
 </head>
 <body style="display: flex;">
 
   <div class="filters">
-      <button class="btn" onclick="noKevins()" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i>  Kevin</button>
-      <button class="btn" onclick="excludeArson()" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i>  Arson</button>
-      <button class="btn" onclick="excludeSaturdays()" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i>  "Saturdays are for the boys"</button>
-      <button class="btn" onclick="momApproved()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i>  My Mom likes</button>
-      <button class="btn" onclick="likesCats()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i>  Cats</button>
-      <button class="btn" onclick="wantsToGetMarried()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i>  Seeking engagement</button>
-
+      <h4 style="font-size: large; text-align: center;">Add New Profile</h4>
+      <input id='nameInput' placeholder="Name">
+      <textarea id='bioInput' placeholder="Bio"></textarea>
+      <input id='job' placeholder="Job">
+      <input id='imageSrc' placeholder="Image URL">
+      <div>
+        <input id='hobby' style="width: 120px" placeholder="Hobby">
+        <button onclick="addHobby()" style="color: rgb(34, 82, 48); width: 50px; margin: 0px; padding: 0px" ><i class="fa fa-plus"></i></button>
+        <div id="hobbyDisplay"></div>
+      </div>
+      <button class="btn" onclick="addNewProfile()" style="color: rgb(34, 82, 48);"><i class="fa fa-heart fa-lg"></i> Add Profile</button>
+      <button class="btn" onclick="clearLocalStorage()" style="color: rgb(202, 38, 38);"><i class="fa fa-times fa-lg"></i> Clear Form</button>
   </div>
 
   <div class="carddeck">
-    <div class="card" id='joe-template'>
+    <div class="card" id='joe-template' style="display: none;">
       <img src="https://static.designeverest.com/static/images/blog/blog228.jpg" alt="Avatar" style="width:100%">
       <div class="data">
         <h4>John Doe - Architect & Engineer</h4>
         <p>I love supporting my girlfriends but my friends think I take jokes too far. I love golf</p>
       </div>
       <div class='cardButtons'>
-        <button class="btn" style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i></button>
-        <button class="btn" style="color: rgb(102, 226, 139); float: right;"><i class="fa fa-heart fa-lg"></i></button>
+        <button class="btn" id='remove' style="color: rgb(202, 38, 38);"><i class="fa fa-user-times fa-lg"></i></button>
+        <button class="btn" id='add' style="color: rgb(102, 226, 139); float: right;"><i class="fa fa-heart fa-lg"></i></button>
       </div>
     </div>
   </div>
