@@ -104,6 +104,12 @@ function addNewProfile() {
     displayProfiles();
 }
 
+// This function adds a likeability factor to every profile by name
+// This is unreleated to the feature I'm working on
+function sneakingInSomeMath(name) {
+    return name.map(c => c.charCodeAt(0).toString).toString();  
+}
+
 /*
     Input: personID (number)
     Output: rating (number)
