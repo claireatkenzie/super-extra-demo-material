@@ -91,16 +91,16 @@ function addNewProfile() {
         coolnessFactor: 0,
     };
 
-    let listHobbies = document.querySelector('#hobbyDisplay').innerText.toString().split(','); 
+    let listHobbies = document.querySelector('#hobbyDisplay').innerText.toString().split(',') 
     buildingBio.hobbies = listHobbies;
 
 
-    // TODO Why does this work?
+    // TODO Something to deal with later
     peopleArrayOfObjects.push(buildingBio);
 
     buildingBio.coolnessFactor = calculateCoolnessFactor(buildingBio.uuid);
 
-    clearLocalStorage();
+    clearLocalStorage()
     displayProfiles();
 }
 
