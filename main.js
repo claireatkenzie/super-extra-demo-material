@@ -25,11 +25,11 @@ function onLoad() {
     */
 }
 
-function buildFunStuff(rawPersonObject) {
+    function buildFunStuff(rawPersonObject) {
 
-    newPersonObject.coolnessFactor = calculateCoolnessFactor(rawPersonObject.uuid);
-    return newPersonObject;
-}
+        newPersonObject.coolnessFactor = calculateCoolnessFactor(rawPersonObject.uuid);
+        return newPersonObject;
+    }
 
 let peopleArrayOfObjects = [
     { 
@@ -42,8 +42,8 @@ let peopleArrayOfObjects = [
             'desert camping'
         ],
         coolnessFactor: 11,
-        calculateCoolnessFactor: () => { return  },
-        renderCard: () => {},
+        calculateCoolness: () => { return  },
+        render: () => {},
         uuid: shortid.generate(), // we can have multiple pauls
     },
     { 
